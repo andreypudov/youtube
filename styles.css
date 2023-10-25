@@ -15,10 +15,35 @@ form {
 
 form > input {
   display: inline-block;
-  border-radius: 0;
-  border: 1px solid transparent;
   font-size: 1.4em;
   padding: 0.4em;
+
+  border: 1px solid #eaeaea;
+  outline:none;
+}
+
+form > input:hover {
+  border-color: #a0a0a0 #b9b9b9 #b9b9b9 #b9b9b9;
+}
+
+form > input:focus {
+  border-color: #4d90fe;
+}
+
+form > input[type="submit"] {
+  border-radius: 2px;
+  background: #f2f2f2;
+  border: 1px solid #f2f2f2;
+  color: #757575;
+  cursor: default;
+}
+
+form > input[type="submit"]:hover {
+  box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  background: #f8f8f8;
+  border: 1px solid #c6c6c6;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  color: #222;
 }
 
 iframe {
