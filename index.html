@@ -23,13 +23,16 @@
       const params = new URLSearchParams(window.location.search);
       const url = params.get('url');
 
+      if (url === '') {
+        window.location.href = window.location.origin;
+      }
+
       if (url) {
         const form = document.querySelector('form');
         const iframe = document.querySelector('iframe');
 
-        const src = (url.startsWith('https://www.youtube.com/watch?v='))
-              ? url.replace('https://www.youtube.com/watch?v=', '')
-              : url;
+        const ytparams = new URLSearchParams(url)
+        const src = ytparams.get('https://www.youtube.com/watch?v');
 
         form.hidden = true;
         iframe.hidden = false;
